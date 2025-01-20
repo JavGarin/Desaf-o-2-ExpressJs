@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors"); // npm install cors
+const cors = require("cors"); // npm cors
 const fs = require("fs");
 
 const app = express();
@@ -62,7 +62,7 @@ app.put("/canciones/:id", (req, res) => {
     }
 });
 
-// eliminar una canción
+// para eliminar una canción
 app.delete("/canciones/:id", (req, res) => {
     const id = req.params.id;
 
@@ -85,5 +85,5 @@ app.delete("/canciones/:id", (req, res) => {
 // para iniciar el servidor
 app.listen(PORT, () => console.log(`Servidor ejecutándose en http://localhost:${PORT}`));
 
-// agrego middleware CORS para evitar el bloqueo de solicitudes: CORS se encargará de enviar las cabeceras correctas
-// en las respuestas HTTP para que los navegadores permitan hacer solicitudes entre diferentes orígenes.
+/* agrego middleware CORS para evitar el bloqueo de solicitudes: CORS se encarga de enviar las cabeceras correctas
+en las respuestas HTTP para que los navegadores permitan hacer solicitudes entre diferentes orígenes.*/
